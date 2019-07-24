@@ -26,8 +26,8 @@ print("Well, hello, " + name + "!")
 user_class = input("Ok, " + name + ", let's start creating your hero. First, choose a class; either warrior, or mage.")
 if user_class == "Warrior":
     print("So, " + name + " the warrior, let's continue.")
-    user_questlevel = input("Now, choose a quest level: easy, med, or hard.")
-    if user_questlevel == "Hard":
+    user_questlevel = input("Now, choose a quest level: 1 or 2.")
+    if user_questlevel == "2":
         print("Hard? Well then, let's start.")
         print()
         print("A troll lives near a town. Every day, the troll attacks the town. Your job is to kill the troll.")
@@ -41,19 +41,77 @@ if user_class == "Warrior":
             print("With one final stomp, you are crushed.")
             print("GAME OVER...")
             exit()
-        if choice1 == "Easy":
+        if choice1 == "Lair":
+            print("You visit the lair of the troll. You pull out your sword and move forward.")
+            print("You are in a damp and dark room.")
+            useless_input = input("Will you move forward?")
+            print("It does not matter. You felt a strange hand thrust you forward.")
+            print()
+            print("...")
+            print("A massive troll stands before you. And it looks hungry...")
+            choice3 = input("Will you attack? Or run the other way?")
+            if choice3 == "Attack":
+                print("You hear your sword whistle and strikes the troll. The troll grabs you and crushes your bones.")
+                print("GAME OVER...")
+                exit()
+            if choice3 == "Run":
+                print("You zap towards the exit. You hit a button as you run past it. ")
+                print("*CLICK*")
+                print("The cave collapses.")
+                print("...")
+                print()
+                print("The troll smashes away at the cave and escapes.")
+                print('Uh-oh.')
+                choice4 = input("Will you sneak up(sneak) behind the troll? Or maybe you should keep running.")
+                if choice4 == "Sneak":
+                    print("The troll lumbers around stupidly. You dodge his stomps as you sneak around him.")
+                    print("POW!!!")
+                    print("You strike the troll in the foot.")
+                    print("It falls off the edge of a nearby cliff!")
+                    print("Congrats!")
+                    print("YOU WIN.")
+                if choice4 == "Run":
+                    print("You keep running.")
+                    print("The troll spots you and pounds you to dust.")
+                    print("GAME OVER.")
+
+        if user_questlevel == "1":
             print("Easy, you say? Easy it is. Let's start.")
             print("You are armed with a sword, and leather armor.")
             print("Your job is too defend a town nearby from being destroyed by an atomic bomb from a nearby evil guy.")
             choice2 = input("Do you go find the evil guy? Or maybe go interact with the town?(Enter Town or Guy)")
             if choice2 == "Guy":
                 print("You embark on an adventure to find the evil guy. I know, it sounds lame.")
-
+                print("You spot a suspicious figure walking around the outskirts of town.")
+                print("You go investigate the figure.")
+                choice5 = input("Do you attack?")
+                if choice5 == "Yes":
+                    print("As you swing your sword forward, you realize that you are attacking an innocent person.")
+                    print("TOO LATE!")
+                    print("You cut off the figure's head.")
+                    print("You get locked up in jail, after being stripped of your weapons.")
+                    print("GAME OVER...")
+                if choice5 == "No":
+                    print("As you look at the figure, you realize that it is an innocent villager.")
+                    print("You move on and see a guy with a remote control in his hand.")
+                    choice6 = input("Do you attack?")
+                    if choice6 == "Yes":
+                        print("Slash! You killed an innocent boy playing with drone.")
+                        print()
+                        print("You get put in jail.")
+                        print("GAME OVER!")
+                    if choice6 == "No":
+                        print("Another innocent person. The guy takes off his hood and you see he is innocent kid.")
+                        print("With a drone.")
+                        print("You move on.")
+                        print("You see a figure with a truly evil aura. Plus he's holding a sword.")
+                        choice7 = input("Will you attack or run away?")
+                        if choice7 == "Attack":
 if user_class == "Mage":
     print(name + ", the mage. Huh. Not bad. Well, let's continue with your hero creation.")
-    user_questlevel = input("Ok. Let's choose a level. Enter easy or hard:")
+    user_questlevel2 = input("Ok. Let's choose a level. Enter 1 or 2:")
+    if user_questlevel2 == "1":
+        print("Okay.")
 else:
-    print("Sorry, but you didn't enter warrior or mage. Make sure the first letter is capital!")
-    print("-----------------------------------------------------------------------------------")
-    print("Taking you to main menu...")
-    print("Please run the program again.")
+    print("AUTOMATIC GAME END.")
+    print("Possible reasons: Death, Win, Invalid input.")
